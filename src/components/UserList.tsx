@@ -6,6 +6,7 @@ import { searchGithubUsers, type GithubUser } from '@/utils/api';
 import { useQuery } from '@tanstack/react-query';
 import { RepositoryList } from './RepositoryList';
 import { UserCard } from './UserCard';
+import { Skeleton } from '@/components/ui/skeleton';
 
 export interface UserListProps {}
 
@@ -39,7 +40,19 @@ export function UserList({}: UserListProps) {
 					</span>
 				)}
 			</div>
-			{isLoading && <div className="py-4 text-foreground">Loading users...</div>}
+			{isLoading && (
+				<div className="w-full flex flex-col gap-4" data-testid="user-skeletons">
+					{Array.from({ length: 5 }).map((_, i) => (
+						<div key={i} className="flex items-center gap-4 rounded-md bg-background">
+							{/* Avatar skeleton */}
+							<Skeleton className="w-12 h-12 rounded-full" />
+							<div className="flex-1 flex flex-col gap-2">
+								<Skeleton className="w-1/2 h-5" />
+							</div>
+						</div>
+					))}
+				</div>
+			)}
 			{isError && <Alert variant="destructive">{error?.message || 'Failed to fetch users.'}</Alert>}
 			{!isLoading && !isError && users.length === 0 && (
 				<div className="py-4 text-center text-foreground">No users found matching your query</div>
