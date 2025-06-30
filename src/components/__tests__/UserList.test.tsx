@@ -1,8 +1,8 @@
 import { render, screen } from '@testing-library/react';
-import { UserList } from '../UserList';
+import { UserList } from '@/components/UserList';
 import { useGithubStore } from '@/store/useGithubStore';
 import { useQuery } from '@tanstack/react-query';
-import { vi } from 'vitest';
+import { describe, expect, it, vi } from 'vitest';
 
 vi.mock('@/store/useGithubStore');
 vi.mock('@tanstack/react-query');

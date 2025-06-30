@@ -1,7 +1,7 @@
 import { render, screen, fireEvent, waitFor } from '@testing-library/react';
-import App from '../../App';
+import App from '@/App';
 import { useQuery } from '@tanstack/react-query';
-import { vi } from 'vitest';
+import { vi, describe, it, expect, beforeEach } from 'vitest';
 
 vi.mock('@tanstack/react-query');
 

@@ -1,6 +1,6 @@
 import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from '@/components/ui/accordion';
 import { Alert } from '@/components/ui/alert';
-import { Pill, PillAvatar } from '@/components/ui/kibo-ui/pill';
+import { Pill } from '@/components/ui/kibo-ui/pill';
 import { useGithubStore } from '@/store/useGithubStore';
 import { searchGithubUsers, type GithubUser } from '@/utils/api';
 import { useQuery } from '@tanstack/react-query';

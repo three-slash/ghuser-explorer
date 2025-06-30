@@ -1,7 +1,7 @@
 import { render, screen, fireEvent } from '@testing-library/react';
-import { SearchBar } from '../SearchBar';
+import { SearchBar } from '@/components/SearchBar';
 import { useGithubStore } from '@/store/useGithubStore';
-import { vi } from 'vitest';
+import { beforeEach, describe, expect, it, vi } from 'vitest';
 
 vi.mock('@/store/useGithubStore');
 
