@@ -4,8 +4,8 @@ import { Github } from 'lucide-react';
 export interface HeaderProps {}
 
 export const Header: React.FC<HeaderProps> = () => (
-	<header className="mb-10 text-center">
-		<div className="flex items-center justify-center gap-2">
+	<header className="mb-10 text-center flex flex-col gap-3">
+		<div className="flex items-center justify-center gap-4">
 			<Github className="w-10 h-auto" />
 			<h1 className="text-3xl md:text-4xl font-bold tracking-tight">GitHub Repositories Explorer</h1>
 		</div>
