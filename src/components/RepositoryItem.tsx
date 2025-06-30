@@ -8,7 +8,7 @@ export interface RepositoryItemProps {
 
 export function RepositoryItem({ repo }: RepositoryItemProps) {
 	return (
-		<Card className="py-4 gap-2 bg-accent/40 border-primary">
+		<Card className="py-4 gap-2 bg-accent/5 border-primary">
 			<CardHeader className="px-4">
 				<div className="flex items-center gap-2">
 					<a
